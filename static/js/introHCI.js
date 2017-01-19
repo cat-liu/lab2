@@ -15,4 +15,14 @@ function initializePage() {
 
 	// Add any additional listeners here
 	// example: $("#div-id").click(functionToCall);
+	$("a.thumbnail").click(projectClick);
+}
+
+function projectClick(e) { 
+    // prevent the page from reloading      
+    e.preventDefault();
+    // In an event handler, $(this) is the element that fired the event 
+    var projectTitle = $(this).find("p").text();
+    var jumbotronHeader = $("#jumbotron h1");
+    jumbotronHeader.text(projectTitle);
 }
