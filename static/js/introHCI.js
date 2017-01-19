@@ -22,9 +22,7 @@ function projectClick(e) { 
     // prevent the page from reloading      
     e.preventDefault();
     // In an event handler, $(this) is the element that fired the event 
-
-    $(this).css("background-color", "#7fff00");
-    //var projectTitle = $(this).find("p").text();
-    //var jumbotronHeader = $("#jumbotron h1");
-    //jumbotronHeader.text(projectTitle);
+    var projectTitle = $(this).find("p").text();
+    var jumbotronHeader = $(".jumbotron h1");
+    jumbotronHeader.text(projectTitle);
 }
